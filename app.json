@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/publishfound/publishfound",
+    "pages/publishlost/publishlost",
+    "pages/detail/detail",
+    "pages/finding/finding"
+  ],
+  "usingComponents": {
+    "v-modal": "/components/modal/index",
+    "v-more": "/components/more/index"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3fc9d8",
+    "navigationBarTitleText": "失物招领",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

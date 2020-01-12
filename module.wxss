@@ -1,0 +1,190 @@
+/* module.wxss */
+
+page {
+  background: #f4f4f4;
+}
+
+/* 顶层盒子 */
+.container {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding-top: 64px;
+}
+
+/* 顶层盒子-iphoneX适配 */
+.iphoneX-box {
+  padding-top: 90px;
+  padding-bottom: 34px !important;
+}
+
+/* 盒子 */
+.box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/*宽度100%*/
+.full {
+  width: 100%;
+}
+
+.red {
+  color: #CB4343;
+}
+
+/*弹窗动画*/
+@keyframes fade-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-blur {
+  from {
+    filter: blur(0)
+  }
+
+  to {
+    filter: blur(3px)
+  }
+}
+
+.fade-blur {
+  animation: fade-blur .3s ease both;
+}
+
+.fade-up {
+  animation: fade-up .3s cubic-bezier(.44, 1.3, .67, 1.04) both;
+}
+
+.fade-up-ease {
+  animation: fade-up .3s ease both;
+}
+
+.fade-in {
+  animation: fade-in .3s ease both;
+}
+
+/*渐变*/
+.gradient {
+  background: -webkit-linear-gradient(left,#f49898,#f7b7b7);
+}
+
+/*按钮*/
+.red-button {
+  background:-webkit-linear-gradient(left,#F3A0A1,#F6AEAE);
+  color: #fff;
+  font-size: 14px;
+  height: 30px;
+  padding: 0 15px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gray-button {
+  background: #fff;
+  color: #808080;
+  font-size: 14px;
+  height: 30px;
+  padding: 0 15px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  border: #808080 1rpx solid;
+}
+
+/*底部工具条*/
+.bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  background: #fff;
+  border-top: rgba(0, 0, 0, .1) 1rpx solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 12px;
+  z-index: 50;
+}
+
+.bar .gray-button, .bar .red-button {
+  margin-left: 14px;
+  height: 70rpx;
+  border-radius: 35rpx;
+  padding: 0 34rpx;
+}
+
+.iphoneX-box .bar {
+  padding-bottom: 30px;
+}
+
+/* tag */
+
+.tag-item:nth-of-type(3n+1) {
+  color: #7DA9D0;
+  border: #86AFD5 1rpx solid;
+  background: #E8F4FF;
+  border-radius: 3px;
+}
+
+.tag-item:nth-of-type(3n+2) {
+  color: #D19C78;
+  border: #D4A17F 1rpx solid;
+  background: #FFF4E2;
+  border-radius: 3px;
+}
+
+.tag-item:nth-of-type(3n+3) {
+  color: #85B398;
+  border: #8BB59C 1rpx solid;
+  background: #EDFFF4;
+  border-radius: 3px;
+}
+
+.product-bgf .tag-item:nth-of-type(3n+3) {
+  color: #CB4343;
+  border: #CB4343 1rpx solid;
+  background: #FFF3F3;
+  border-radius: 3px;
+}
+
+/*快捷导航组件*/
+
+.navigation {
+  position: fixed;
+  width: 94rpx;
+  height: 94rpx;
+  right: 20rpx;
+  top: 60%;
+  z-index: 200;
+}

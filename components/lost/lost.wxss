@@ -1,0 +1,48 @@
+/**lost.wxss**/
+.container{
+  padding:20rpx;
+  font-size: 32rpx;
+  background:#fff;
+}
+.main-item{
+  padding-bottom:20rpx;
+}
+.date{
+  color:#fff;
+  background-color:#fd9b77;
+  padding:5rpx 6rpx;
+  display:inline-block;
+  text-align: center;
+}
+.item{
+  display: flex;
+  justify-content: space-between;
+  line-height: 1;
+  padding: 20rpx 0;
+}
+.title{
+  color: #000;
+  font-weight: 800;
+}
+.right-name{
+  background-color:#fbea99;
+  line-height: 1;
+  padding: 6rpx 15rpx;
+  border-radius: 30rpx;
+  margin-right: 6rpx;
+}
+.item-date{
+  color:#999;
+  margin-left:5rpx;
+}
+.name{
+  color:#808080;
+  padding-bottom:10rpx;
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: normal!important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical
+}

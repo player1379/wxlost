@@ -1,0 +1,43 @@
+/* components/navbar/navbar.wxss */
+
+.nav {
+  position: fixed;
+  right: 40px;
+  bottom: 50px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+.shi, .diu {
+  position: absolute;
+  bottom:135px;
+  width: 50px;
+  height: 50px;
+  background: #a3cd92;
+  border-radius: 50%;
+  line-height: 50px;
+  text-align: center;
+  color:#fff;
+  font-size: 20px;
+  transform: translate(0,40%);
+  opacity: 0;
+  transition: .5s;
+}
+.diu{
+  bottom:70px;
+  background:#fb9a72;
+  
+}
+.noshi{
+    transform: translate(0,0);
+    opacity: 1;
+    transition: 1s;
+}
+.nodiu{
+    transform: translate(0,0);
+    opacity: 1;
+    transition: 1s;
+}

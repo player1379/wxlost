@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "tab":"/components/tab/tab",
+    "nav": "/components/navbar/navbar",
+    "found":"/components/found/found",
+    "lost":"/components/lost/lost",
+    "my": "/components/my/my"
+  }
+}

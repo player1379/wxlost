@@ -1,0 +1,110 @@
+<view class="mypage">
+  <view class="page__bd">
+    <view class="weui-cells__title">物品类别</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+         <picker class="weui-cell__bd" bindtap="selectCat" bindchange="bindPickerTypeChange" value="{{types[index]}}" range="{{types}}">
+            <view class="weui-cell__hd">
+              <view class="weui-label">物品类别</view>
+            </view>
+            <view>{{formData.type}}</view>
+
+         </picker>   
+        </view>
+
+    <view class="weui-cells__title">物品信息</view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <view class="weui-label">物品名称</view>
+        </view>
+        <div class="weui-cell__bd">
+        <input data-field="goods" bindinput="formInputChange" class="weui-input" placeholder="物品具体名称"/>
+        </div>
+      </view>
+
+      <view class="weui-cell">
+      <picker class='weui-cell__bd' mode="date" value="{{lostTime}}" start="2019-01-01" end="2020-12-31" bindchange="lostTimeChange">
+        <view class="weui-cell__hd">
+            <view class="weui-label">丢失时间</view>
+        </view>
+        <view class="picker">{{formData.losttime}}</view>
+
+        </picker>
+      </view>
+               
+      <view class="weui-cell">
+      <picker class='weui-cell__bd' bindchange="bindPickerAreaChange" value="{{types[index]}}" range="{{areas}}">
+        <view class="weui-cell__hd">
+          <view class="weui-label">丢失校区</view>
+        </view>
+          <view>{{formData.area}}</view>
+        </picker>
+      </view>
+  <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <view class="weui-label">丢失地点</view>
+        </view>
+        <div class="weui-cell__bd">
+        <input data-field="address" bindinput="formInputChange" class="weui-input" placeholder="丢失物品具体地点"/>
+        </div>
+      </view>
+        
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <view class="weui-label">备注</view>
+        </view>
+        <div class="weui-cell__bd">
+        <input data-field="desc" bindinput="formInputChange" class="weui-input" placeholder="具体描述一下丢失的物品吧~"/>
+        </div>
+      </view>
+          <view class="img-main" wx:if="{{isImg}}">
+      <image mode="aspectFill" src="{{imgUrl}}" class="img"></image>
+    </view>
+    <view class="weui-cell" wx:else>
+          <view class="weui-cell__bd">
+          <button bindtap='chooseImageTap'>上传图片</button>
+          </view>
+      </view>
+
+  </view>
+
+
+
+
+                <!-- <view class="weui-cell">
+                      <view class="weui-cell__bd">
+
+                        <view style="color: blue"><span bindtap="selectImg" wx:if="{{ showAdd }}" >添加图片 </span><span bindtap="deleteImg" wx:if="{{ showDelete }}"> 删除图片</span></view>
+
+                        <editor id="editor2"
+                              data-field="description" bindinput="desInputChange" placeholder="物品详细的描述以及备注信息，上传照片时请注意隐藏物品部分细节用于和失主核对" >
+
+                        </editor>
+                      </view>
+                 </view> -->
+            </view>
+            <view class="weui-cells__title">联系方式</view>
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell">
+                    <view class="weui-cell__hd">
+                      <view class="weui-label">手机号</view>
+                    </view>
+                    <div class="weui-cell__bd">
+                        <input data-field="mobile" bindinput="formInputChange" class="weui-input" type="digit" placeholder=""/>
+                    </div>
+                </view>
+                <view class="weui-cell">
+                    <view class="weui-cell__hd">
+                      <view class="weui-label">QQ号</view>
+                    </view>
+                    <div class="weui-cell__bd">
+                        <input data-field="qqnumber" bindinput="formInputChange" class="weui-input" type="digit" placeholder="选填，建议填写"/>
+                    </div>
+                </view>
+        
+            <view class="weui-cell">
+                <button type="primary" class="submit" bindtap="formSubmit">提交</button>
+            </view>
+
+  </view>
+</view>

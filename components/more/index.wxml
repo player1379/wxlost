@@ -1,0 +1,54 @@
+<!--pages/index/components/more/index.wxml-->
+
+<!--更多筛选项 start-->
+<view class="more">
+  <view class="box-item">
+    <view class="title">关键词</view>
+    <input value='{{searchVal}}' class='search' placeholder='物品名称丶卡号丶描述等'></input>
+  </view>
+  <scroll-view scroll-y class="box">
+
+    <view wx:if="{{ tag.length > 0 }}" class="box-item">
+      <view class="title">标签</view>
+      <view class="list">
+        <view wx:for="{{ tag }}" wx:key="{{ item.tagId }}" bind:tap="handleTapTag" 
+        data-tagId="{{ item.tagId }}" class="item {{ item.selected ? 'selected' : '' }}">
+          <view class="item-text">{{ item.tagName }}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="box-item">
+    <view class="title">捡到时间</view>
+    <view class='selectTimeBox'>
+      <picker class='startTime' mode="date" value="{{startTime}}" start="2019-01-01" end="2020-12-31" bindchange="startTimeChange">
+        <view class="picker">
+          {{startTime}}
+        </view>
+      </picker>
+      <text class='xian'>—</text>
+      <picker class='endTime' mode="date" value="{{endTime}}" start="2019-01-01" end="2020-12-31" bindchange="endTimeChange">
+        <view class="picker">
+          {{endTime}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="box-item">
+    <view class="title">捡到地点</view>
+    <picker class='addressPicker' bindchange="addressPickerChange" value="{{addressIndex}}" range="{{addressArray}}">
+      <view class="picker">
+        {{addressArray[addressIndex]}}
+      </view>
+    </picker>
+  </view>
+  <view class="box-item">
+     <view bind:tap="handReset" class="resetBtn">重置搜索条件</view>
+  </view>
+  <view catch:touchmove="handleTouchmove" class="bottom">
+    <view bind:tap="handleTapOk" class="bottom-item reset">关闭</view>
+    <view bind:tap="handleTapCancel" class="bottom-item ok">搜索</view>
+  </view>
+
+</view>
+<!--更多筛选项 end-->

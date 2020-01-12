@@ -1,0 +1,23 @@
+<tab bind:tabSelect='tabSelect' bind:searching='searching'></tab>
+<found wx:if='{{tabIndex==1}}'></found>
+<lost wx:if='{{tabIndex==2}}'></lost>
+<my wx:if='{{tabIndex==3}}'></my>
+
+<nav></nav>
+<!--弹窗 start-->
+<v-modal
+  wx:if="{{ showModal }}"
+  position="bottom"
+  bind:handleCloseModal="handleCloseModal"
+>
+  <v-more
+    wx:if="{{ modalList.showMore }}"
+    slot="modal"
+    tag="{{ tag }}"
+    bind:handleTapTag="handleTapTag"
+    bind:handleTapBrand="handleTapBrand"
+    bind:handleTapOk="handleCloseModal"
+    bind:handReset="handReset"
+  />
+</v-modal>
+<!--弹窗 end-->

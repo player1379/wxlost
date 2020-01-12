@@ -1,0 +1,28 @@
+<!-- lost.wxml-->
+<view class="container">
+<view class="main-item" wx:for='{{lists}}'  wx:key='{{index}}'>
+<view bindtap='bindTapDetail' id='{{item.id}}'>
+   <!--这里是用户填写的丢失时间！-->
+   <view class="date">
+     {{item.losttime}}
+    </view>
+    <view class="item">
+      <view>
+       <text class="title">{{item.goods}} </text>
+       <text>></text>
+       </view>
+        <view class="right-main">
+           <text class="right-name">{{item.type}}</text>
+             <text class="right-last">{{item.area}}</text><text class="item-date"></text>
+        </view>
+    </view>
+        <view class="img-main">
+    <image mode="aspectFill" src="{{item.img  }}" class="img"></image>
+    </view>
+    <view class="name">
+    <text>{{item.desc}} 请拾到的同学尽快与我联系，非常感谢！</text>
+    </view>
+</view>
+  </view>
+
+</view>

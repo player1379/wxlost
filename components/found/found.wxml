@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="container">
+<view class="main" wx:for='{{lists}}'  wx:key='{{index}}' >
+<view bindtap='bindTapDetail' id='{{item.id}}'>
+   <view class="date">
+    {{item.created_at}}
+    </view>
+    <view class="item">
+       <view class="title">
+       <text>{{item.goods}}</text>
+       <image class='rightIcon' src='/images/right.png'></image> </view>
+        <view class="right-main">
+           <text class="right-name">{{item.area}}</text>
+             <text class="right-last">{{item.type}}</text>
+        </view>
+    </view>
+    <view class="name">
+    <text>{{item.desc}}</text>
+
+    </view>
+    <view class="img-main">
+    <image mode="aspectFill" src="{{item.img  }}" class="img"></image>
+    </view>
+</view>
+ </view>
+</view>
+
+

@@ -1,0 +1,51 @@
+/* components/tab/tab.wxss */
+.tab{
+  display:flex;
+  justify-content: center;
+  padding:15px 0;
+  border-bottom:10px solid #f1f1f3;
+  position: relative;
+  background:#fff;
+}
+.searchIcon{
+  position: absolute;
+  width:100%;
+  right:0;
+}
+.searchButton{
+  position: absolute;
+  right:20px;
+  width:32px;
+  height:32px;
+  background-size:100% 100%;
+  background-repeat: no-repeat;
+  border:none;
+}
+.tabBox {
+  width: 60%;
+  display: flex;
+}
+
+.tabBox text {
+  flex: 1;
+  border: 1px solid #45c8dc;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #45c8dc;
+}
+.tabBox text:nth-child(1) {
+ border-radius: 5px 0 0 5px;
+}
+.tabBox text:nth-child(2) {
+ border-left:0;
+ border-right:0;
+ border-radius: 0;
+}
+.tabBox text:nth-child(3) {
+ border-radius:  0 5px  5px 0;
+}
+.selected{
+  background:#45c8dc;
+  color:#fff !important;
+}

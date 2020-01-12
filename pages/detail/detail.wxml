@@ -1,0 +1,86 @@
+<view class="mypage">
+  <view class="page__bd">
+
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <view class="weui-label">物品名称</view>
+        </view>
+        <div class="weui-cell__bd">
+          <text>{{detail.goods}}</text>
+        </div>
+      </view>
+       <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <view class="weui-label">物品类型</view>
+        </view>
+        <div class="weui-cell__bd">
+           <text>{{detail.type}}</text>
+        </div>
+      
+  </view>
+       
+               
+  <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <view class="weui-label">捡到时间</view>
+        </view>
+        <div class="weui-cell__bd">
+         <text>{{detail.created_at}}</text>
+        </div>
+      </view>
+  </view>
+   <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <view class="weui-label">捡到校区</view>
+        </view>
+        <div class="weui-cell__bd">
+           <text>{{detail.area}}</text>
+        </div>
+      
+  </view>
+ <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <view class="weui-label">捡到地点</view>
+        </view>
+        <div class="weui-cell__bd">
+           <text>{{detail.address}}</text>
+        </div>
+      
+  </view>
+  
+   <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <view class="weui-label">联系手机号码</view>
+        </view>
+        <div class="weui-cell__bd">
+           <text>{{detail.mobile}}</text>
+        </div>
+      
+  </view>
+
+   <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <view class="weui-label">当前状态</view>
+        </view>
+        <div class="weui-cell__bd">
+           <text>{{detail.status}}</text>
+        </div>
+      
+  </view>
+
+            <view class="weui-cells__title">捡到物品详情</view>
+            <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell">
+                    <view class="weui-cell__hd">
+                      <text>{{detail.desc}}</text>
+                      <img src=""></img>
+                    </view>   
+                </view>
+
+        
+            <view class="weui-cell">
+                <button type="primary" class="submit" bindtap="complete">我丢失了该物品</button>
+            </view>
+
+  </view>
+</view>

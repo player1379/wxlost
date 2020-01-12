@@ -1,0 +1,6 @@
+.submit {
+    width: 80%;
+}
+.mypage {
+    height: 100%;
+}

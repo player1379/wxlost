@@ -1,0 +1,69 @@
+<!--pages/my/my.wxml-->
+<view class="container">
+  <view class="infor">
+    <image mode="aspectFill" src="../../images/fake.png" class="img"></image>
+    <view class="right-infor">
+      <text>Name</text>
+      <text> 校园实名用户</text>
+    </view>
+  </view>
+  <view class="message">
+    <view class="message-item">
+      <text>校园卡号</text>
+      <text>123456</text>
+      <!-- <image class='icon' src='/images/edit.png'></image> -->
+    </view>
+    <view class="message-item">
+      <text>QQ</text>
+      <text>123456</text>
+      <button class="icon" style="background-image:url(../../images/edit.png);" bindtap="editqq"></button>
+    </view>
+    <view class="message-item">
+      <text>手机号</text>
+      <text>123456</text>
+      <button class="icon" style="background-image:url(../../images/edit.png);" ></button>
+    </view>
+  </view>
+
+  <view class="main" wx:for='{{lists}}' wx:key='{{index}}'>
+    <view class="main-top">
+      <!-- <view class="tag {{'type'+item.type}}" wx:if='{{item.type==1}}'>
+        待处理的物品
+      </view> -->
+      <view class="tag {{'type'+item.type}}" wx:if='{{item.type==2}}'>
+        我丢失的物品
+      </view>
+      <view class="tag {{'type'+item.type}}" wx:if='{{item.type==3}}'>
+        我捡到的物品
+      </view>
+      <text>查看全部</text>
+    </view>
+    <view wx:if='{{item.type==1}}'>还没有待处理的物品</view> 
+    <view wx:if='{{item.type==2}}'>
+    <view class="main" wx:for='{{myLost.lost}}' wx:key='{{index}}'>
+        <view class='content3'>
+      <view class="title">
+        <text>{{item.goods}}</text>
+        <image class='rightIcon' src='/images/right.png'></image>
+      </view>
+      <text class='tips'>{{item.status}}</text>
+
+    </view>
+    </view>
+    </view>
+<view wx:if='{{item.type==3}}'>
+    <view class="main" wx:for='{{myLost.find}}' wx:key='{{index}}'>
+        <view class='content3'>
+      <view class="title">
+        <text>{{item.goods}}</text>
+        <image class='rightIcon' src='/images/right.png'></image>
+      </view>
+      <text class='tips'>{{item.status}}</text>
+
+    </view>
+    </view>
+    </view>
+  </view>
+
+
+</view>

@@ -1,0 +1,15 @@
+<!--components/navbar/navbar.wxml-->
+<view class='nav'>
+  <view class='addBtn' bindtap='checkFlag' wx:if='{{!isOpen}}'>
+    <image class='icon' src='/images/add.png'></image>
+  </view>
+  <view class='chaBtn' bindtap='checkFlag' wx:if='{{isOpen}}'>
+    <image class='icon' src='/images/cha.png'></image>
+  </view>
+  <view data-index='4' class='shi {{isOpen?"noshi":""}}' bindtap="publishFound" >
+    <text>拾</text>
+  </view>
+  <view class='diu {{isOpen?"nodiu":""}}' bindtap="publishLost" >
+    <text>丢</text>
+  </view>
+</view>

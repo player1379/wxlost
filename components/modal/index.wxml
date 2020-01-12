@@ -1,0 +1,15 @@
+<!--components/modal/index.wxml-->
+
+<!--弹窗 start-->
+<view class="modal" style="{{ style }}">
+
+  <!--非内容区域点击可关闭 start-->
+  <view bind:tap="handleCloseModal" catch:touchmove="handleTouchmove" class="modal-close-box"/>
+  <!--非内容区域点击可关闭 end-->
+
+  <!--弹窗主内容 start-->
+  <slot name="modal"/>
+  <!--弹窗主内容 end-->
+
+</view>
+<!--弹窗 end-->
